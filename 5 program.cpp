@@ -2,14 +2,18 @@
 using namespace std;
 void max(int x, int y , int z)
 { 
-    if(x == y | y == z | z ==x)
-        cout<<"Any of two are same."<<endl;
-    else if(x > y && y > z)
-        cout<<"The largest number is : "<<x<<endl;
-    else if(y > z && z > x)
-        cout<<"The largest number is : "<<y<<endl;
-    else
-        cout<<"The largest number is : "<<z<<endl;
+     if (x >= y) {   //if x is greater than y
+            if (x >= z)  // then x is must be greater than z
+                cout << "Largest number: " << x;  // if both upper condition satisfies then x printed.
+            else //unlike 2nd condition z will be greater than x so
+                cout << "Largest number: " << z;//z is printed
+        }
+        else {
+            if (y >= z) // if y is greater than z
+                cout << "Largest number: " << y; // y is printed
+            else
+                cout << "Largest number: " << z; //otherwise z is printed
+        }
 }
 int main()
 {
